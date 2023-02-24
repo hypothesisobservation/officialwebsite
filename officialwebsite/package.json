@@ -1,0 +1,39 @@
+{
+  "name": "qcl",
+  "version": "0.0.1",
+  "description": "QCL Digital qcldigital 上海璩篪网络信息技术服务有限责任公司 解决技术方面的难题 企业数字化和智能化 数字化产品 现代的软件开发方法 AEM 微服务 云服务 小程序",
+  "productName": "QCL Digital 璩篪网络",
+  "author": "tech.admin@qcldigital.com",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
+    "core-js": "^3.6.5",
+    "lottie-web": "^5.7.4",
+    "quasar": "^1.0.0",
+    "vue-i18n": "^8.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^2.0.0",
+    "@quasar/quasar-app-extension-qflashcard": "^1.0.5"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
