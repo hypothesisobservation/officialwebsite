@@ -20,8 +20,8 @@ const https = require("https"),
   fs = require("fs");
 
 const options = {
-  key: fs.readFileSync("/ssl/Nginx/9075705_www.qcldigital.com.key"),
-  cert: fs.readFileSync("/ssl/Nginx/9075705_www.qcldigital.com.pem")
+  // key: fs.readFileSync("/ssl/Nginx/9075705_www.qcldigital.com.key"),
+  // cert: fs.readFileSync("/ssl/Nginx/9075705_www.qcldigital.com.pem")
 };
 const app = express()
 const port = process.env.PORT || 3000
@@ -30,15 +30,15 @@ const serve = (path, cache) => express.static(ssr.resolveWWW(path), {
   maxAge: cache ? 1000 * 60 * 60 * 24 * 30 : 0
 })
 //redirect https
-app.get('/', function (req, res, next) {
-  if (req.secure) {
-          // request was via https, so do no special handling
-          next();
-  } else {
-          // request was via http, so redirect to https
-          res.redirect('https://' + req.headers.host + req.url);
-  }
-})
+// app.get('/', function (req, res, next) {
+//   if (req.secure) {
+//           // request was via https, so do no special handling
+//           next();
+//   } else {
+//           // request was via http, so redirect to https
+//           res.redirect('https://' + req.headers.host + req.url);
+//   }
+// })
 // gzip
 app.use(compression({ threshold: 0 }))
 
@@ -118,4 +118,4 @@ app.get(ssr.resolveUrl('*'), (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening at port ${port}`)
 })
-https.createServer(options, app).listen(443);
+// https.createServer(options, app).listen(443);
