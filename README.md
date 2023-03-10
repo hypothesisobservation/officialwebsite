@@ -4,19 +4,19 @@ QCL Website
 
 ## Install the dependencies
 ```bash
-npm install -g @quasar/cli
-npm install pm2@latest -g
+nvm use v16.19.1
+npm install pm2@latest -g //optional
 npm install
 ```
 
 ### Instlal qflashcard
 ```bash
-quasar ext add @quasar/qflashcard
+quasar ext add @quasar/qflashcard //optional
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
-quasar dev
+npx quasar dev
 http://localhost:8080/
 ```
 
@@ -36,8 +36,9 @@ const options = {
 //          res.redirect('https://' + req.headers.host + req.url);
 //  }
 //})
+// https.createServer(options, app).listen(443);
 
-quasar build --mode ssr
+npx quasar build --mode ssr
 cd dist/ssr
 npm run start
 http://localhost:3000/
