@@ -11,7 +11,7 @@ npm install
 
 ### Instlal qflashcard
 ```bash
-quasar ext add @quasar/qflashcard //optional
+npx quasar ext add @quasar/qflashcard //optional
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
@@ -48,11 +48,11 @@ http://localhost:3000/
 ### Build the app for production
 ```bash
 (SPA)
-quasar build
+npx quasar build
 \cp -rf /var/lib/jenkins/workspace/QCLSSR/dist/spa/* /var/www/html
 (SSR)
 cd /var/lib/jenkins/workspace/QCLSSR
-quasar build --mode ssr
+npx quasar build --mode ssr
 cd dist/ssr && npm install && PORT=80 npm run start
 cd dist/ssr && npm install && pm2 stop index && PORT=80 pm2 start index.js
 ```
